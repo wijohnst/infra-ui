@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { breakpoints } from "./style-vars";
 
-export const LinkButton = styled.button<{ isActive?: boolean }>`
+export const LinkButton = styled.button<{ isactive?: boolean }>`
   background-color: transparent;
   border: none;
-  color: ${({ isActive }) =>
-    isActive ? "var(--color-primary)" : "var(--color-text)"};
+  color: ${({ isactive }) =>
+    isactive ? "var(--color-primary)" : "var(--color-text)"};
   cursor: pointer;
   font-size: 1rem;
   margin: 0;
