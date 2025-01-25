@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Header } from "./Header";
-
 import { Section } from "./App";
 import { ContentSection, LayoutWrapper } from "./Layout.style";
 import { Footer } from "./Footer";

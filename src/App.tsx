@@ -7,8 +7,10 @@ import { Why } from "./Why";
 import { Bond } from "./Bond";
 import { After } from "./After";
 import { Involved } from "./Involved";
+import { LogoSplash } from "./LogoSplash";
 
 export type Section =
+  | "splash"
   | "home"
   | "infrastructure"
   | "why"
@@ -17,8 +19,9 @@ export type Section =
   | "involved";
 
 function App() {
-  const [section, setSection] = React.useState<Section>("home");
+  const [section, setSection] = React.useState<Section>("splash");
 
+  const splashRef = React.useRef<HTMLDivElement>(null);
   const homeRef = React.useRef<HTMLDivElement>(null);
   const infrastructureRef = React.useRef<HTMLDivElement>(null);
   const whyRef = React.useRef<HTMLDivElement>(null);
@@ -54,6 +57,9 @@ function App() {
     <React.Fragment>
       <GlobalStyle />
       <Layout setSection={setSection} section={section}>
+        <div ref={splashRef}>
+          <LogoSplash />
+        </div>
         <div ref={homeRef}>
           <Home />
         </div>
