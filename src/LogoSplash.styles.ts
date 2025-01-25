@@ -20,8 +20,7 @@ export const LogoSplashWrapper = styled.div<{}>`
 
     @media (max-width: ${breakpoints.SM}) {
       object-fit: cover;
-      object-position: 0% 30%;
-      /* animation: scroll-object-sm 2s linear 1 forwards; */
+      object-position: 0% 75%;
       animation: dim 1s linear 1s 1 forwards;
     }
   }
