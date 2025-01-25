@@ -6,7 +6,7 @@ export const LogoSplashWrapper = styled.div<{}>`
   position: relative;
 
   @media (max-width: ${breakpoints.SM}) {
-    height: 150px;
+    height: 125px;
   }
 
   img {
@@ -16,7 +16,14 @@ export const LogoSplashWrapper = styled.div<{}>`
     width: 100%;
     filter: brightness(1);
 
-    animation: scroll-object 3s linear 1 forwards;
+    animation: scroll-object 3.5s ease-in-out 1 forwards;
+
+    @media (max-width: ${breakpoints.SM}) {
+      object-fit: cover;
+      object-position: 0% 30%;
+      /* animation: scroll-object-sm 2s linear 1 forwards; */
+      animation: dim 1s linear 1s 1 forwards;
+    }
   }
 
   div {
@@ -31,13 +38,15 @@ export const LogoSplashWrapper = styled.div<{}>`
     color: white;
     opacity: 0;
 
-    animation: fade-in 0.5s ease-in 3s 1 forwards;
+    animation: fade-in 0.5s ease-in-out 3s 1 forwards;
 
     h1 {
       text-align: center;
     }
 
     @media (max-width: ${breakpoints.SM}) {
+      animation: fade-in 1s ease-in-out 2s 1 forwards;
+
       h1 {
         font-size: 1rem;
       }
@@ -46,7 +55,21 @@ export const LogoSplashWrapper = styled.div<{}>`
 
   @keyframes scroll-object {
     0% {
-      object-position: 0% 50%;
+      object-position: 0% 60%;
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(1);
+    }
+    100% {
+      object-position: 0% 100%;
+      filter: brightness(0.5);
+    }
+  }
+
+  @keyframes scroll-object-sm {
+    0% {
+      object-position: 0% 30%;
       filter: brightness(1);
     }
     50% {
@@ -67,12 +90,12 @@ export const LogoSplashWrapper = styled.div<{}>`
     }
   }
 
-  /* @keyframes dim-brightness {
+  @keyframes dim {
     0% {
       filter: brightness(1);
     }
     100% {
       filter: brightness(0.5);
     }
-  } */
+  }
 `;
