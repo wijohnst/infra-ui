@@ -24,37 +24,37 @@ export const Header = ({
       </TextLogo>
       <nav>
         <LinkButton
-          isActive={section === "home"}
+          $isActive={section === "home" || section === "splash"}
           onClick={() => handleSectionChange("home")}
         >
           Home
         </LinkButton>
         <LinkButton
-          isActive={section === "infrastructure"}
+          $isActive={section === "infrastructure"}
           onClick={() => handleSectionChange("infrastructure")}
         >
           Why Infrastructure?
         </LinkButton>
         <LinkButton
-          isActive={section === "why"}
+          $isActive={section === "why"}
           onClick={() => handleSectionChange("why")}
         >
           Why Now?
         </LinkButton>
         <LinkButton
-          isActive={section === "bond"}
+          $isActive={section === "bond"}
           onClick={() => handleSectionChange("bond")}
         >
           Why a bond?
         </LinkButton>
         <LinkButton
-          isActive={section === "after"}
+          $isActive={section === "after"}
           onClick={() => handleSectionChange("after")}
         >
           What happens after?
         </LinkButton>
         <LinkButton
-          isActive={section === "involved"}
+          $isActive={section === "involved"}
           onClick={() => handleSectionChange("involved")}
         >
           {" "}
