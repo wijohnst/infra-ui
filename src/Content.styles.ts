@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
 export const SemanticElement = styled.section`
-  min-height: 400px;
-  border: 1px solid var(--color-primary);
+  background-color: var(--color-neutral);
+  width: 100%;
+  height: 100%;
 
-  background-color: var(--technical-light-gray);
+  min-height: 400px;
+
+  opacity: 75%;
 `;

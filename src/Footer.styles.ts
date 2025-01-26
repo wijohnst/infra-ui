@@ -4,11 +4,11 @@ export const SemanticElement = styled.footer`
   flex-shrink: 0;
   position: sticky;
 
+  background-color: var(--color-neutral);
+
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border-top: solid 3px var(--color-secondary);
 
   padding: var(--layout-size-md);
 `;

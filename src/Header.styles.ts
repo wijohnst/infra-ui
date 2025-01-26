@@ -11,7 +11,8 @@ export const SemanticElement = styled.header`
   align-items: center;
 
   padding: var(--layout-size-lg);
-  border-bottom: 3px solid var(--color-secondary);
+
+  background-color: var(--color-neutral);
 
   nav {
     display: flex;
