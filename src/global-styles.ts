@@ -52,6 +52,7 @@ table {
     height: 100%;
 
     box-sizing: border-box;
+    font-size: 16px;
 
     // LAYOUT SIZES
     --layout-size-xs : .1rem; // 1.6 px @ 16px base
@@ -70,12 +71,54 @@ table {
     --color-neutral: #FFFFFF;
     --color-text: #000000;
 
+    --color-pipe-green: #23f354;
+    --color-pipe-blue: #15cbf6;
+    --color-pipe-orange: #ff8e47;
+
+    --debug: lightpink;
+
     // TYPOGRAPHY
-    --typography-font-family: 'Roboto', sans-serif;
+    --typography-font-family: 'Inter', sans-serif;
+    --typography-font-size: 16px;
+
+    // GRADIENTS
+    --pipe-gradient-y: linear-gradient(90deg, var(--color-pipe-green) 0%, var(--color-pipe-blue) 50%, var(--color-pipe-orange) 100%);
+
+    --pipe-gradient-x: linear-gradient(180deg, var(--color-pipe-green) 0%, var(--color-pipe-blue) 50%, var(--color-pipe-orange) 100%);
+
+    p {
+        line-height: 1.6; /* Comfortable line spacing */
+        color: #333; /* Dark gray for reduced eye strain compared to pure black */
+        text-align: justify; /* Justify text for a clean, aligned look */
+        max-width: 65ch; /* Limit paragraph width for better readability */
+        word-spacing: 0.05em; /* Slightly increase word spacing */
+    }
+
+    @media (max-width: 768px) {
+        p {
+            font-size: 14px; /* Adjust for smaller screens */
+            margin-bottom: 1em; /* Reduce spacing */
+        }
+    } 
 }
 
 h1 {
     font-size: 2rem;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+h4{
+    font-size: 1rem;
     font-weight: 500;
 }
 `;

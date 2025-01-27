@@ -3,6 +3,7 @@ import { Header } from "./Header";
 import { Section } from "./App";
 import { ContentSection, LayoutWrapper } from "./Layout.style";
 import { Footer } from "./Footer";
+import { LogoSplash } from "./LogoSplash";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ export const Layout = ({
   return (
     <LayoutWrapper>
       <Header setSection={setSection} section={section} />
+      <LogoSplash />
       <ContentSection>{children}</ContentSection>
       <Footer />
     </LayoutWrapper>

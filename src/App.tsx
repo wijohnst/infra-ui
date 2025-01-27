@@ -7,10 +7,8 @@ import { Why } from "./Why";
 import { Bond } from "./Bond";
 import { After } from "./After";
 import { Involved } from "./Involved";
-import { LogoSplash } from "./LogoSplash";
 
 export type Section =
-  | "splash"
   | "home"
   | "infrastructure"
   | "why"
@@ -19,9 +17,8 @@ export type Section =
   | "involved";
 
 function App() {
-  const [section, setSection] = React.useState<Section>("splash");
+  const [section, setSection] = React.useState<Section | null>(null);
 
-  const splashRef = React.useRef<HTMLDivElement>(null);
   const homeRef = React.useRef<HTMLDivElement>(null);
   const infrastructureRef = React.useRef<HTMLDivElement>(null);
   const whyRef = React.useRef<HTMLDivElement>(null);
@@ -30,7 +27,6 @@ function App() {
   const involvedRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
-    console.log(section);
     switch (section) {
       case "home":
         homeRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -53,13 +49,27 @@ function App() {
     }
   }, [section]);
 
+  //   const getContentHeight = (): number => {
+  //     const homeHeight = homeRef.current?.clientHeight || 0;
+  //     const infrastructureHeight = infrastructureRef.current?.clientHeight || 0;
+  //     const whyHeight = whyRef.current?.clientHeight || 0;
+  //     const bondHeight = bondRef.current?.clientHeight || 0;
+  //     const afterHeight = afterRef.current?.clientHeight || 0;
+  //     const involvedHeight = involvedRef.current?.clientHeight || 0;
+  //     return (
+  //       homeHeight +
+  //       infrastructureHeight +
+  //       whyHeight +
+  //       bondHeight +
+  //       afterHeight +
+  //       involvedHeight
+  //     );
+  //   };
+
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Layout setSection={setSection} section={section}>
-        <div ref={splashRef}>
-          <LogoSplash />
-        </div>
+      <Layout setSection={setSection} section={section || "home"}>
         <div ref={homeRef}>
           <Home />
         </div>

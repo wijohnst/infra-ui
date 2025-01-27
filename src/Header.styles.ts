@@ -5,13 +5,30 @@ import { breakpoints } from "./style-vars";
 export const SemanticElement = styled.header`
   flex-shrink: 0;
 
-  padding: var(--layout-size-sm);
+  padding: var(--layout-size-md);
 
   display: flex;
   align-items: center;
 
-  padding: var(--layout-size-lg);
-  border-bottom: 3px solid var(--color-secondary);
+  background-color: var(--color-neutral);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Adjust based on border width */
+    left: 0;
+    right: 0;
+    height: 10px; /* Adjust based on border width */
+    background: var(--pipe-gradient-y);
+  }
 
   nav {
     display: flex;

@@ -1,8 +1,17 @@
 import styled from "styled-components";
 
 export const SemanticElement = styled.section`
-  min-height: 400px;
-  border: 1px solid var(--color-primary);
+  margin-bottom: 1rem;
+  border-radius: var(--layout-size-md);
 
-  background-color: var(--technical-light-gray);
+  padding: var(--layout-size-xxl);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  min-height: 400px;
+
+  background-color: rgba(255, 255, 255, 0.5);
+
+  h2 {
+    font-size: 4rem;
+    font-weight: 900;
+  }
 `;
