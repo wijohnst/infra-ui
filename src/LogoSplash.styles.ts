@@ -5,6 +5,18 @@ export const LogoSplashWrapper = styled.div<{}>`
   height: 275px;
   position: relative;
 
+  border-bottom: 10px solid transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Adjust based on border width */
+    left: 0;
+    right: 0;
+    height: 10px; /* Adjust based on border width */
+    background: linear-gradient(90deg, #23f354 0%, #15cbf6 50%, #ff8e47 100%);
+  }
+
   @media (max-width: ${breakpoints.SM}) {
     height: 125px;
   }

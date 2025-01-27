@@ -24,7 +24,7 @@ export const Header = ({
       </TextLogo>
       <nav>
         <LinkButton
-          $isActive={section === "home" || section === "splash"}
+          $isActive={section === "home"}
           onClick={() => handleSectionChange("home")}
         >
           Home

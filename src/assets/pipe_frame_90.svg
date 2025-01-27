@@ -1,0 +1,10 @@
+<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 29L12 30V48H15L23 46L28 44L36 38L41 33L44 27L47 21V12H34H30V14L29 19L27 23L22 27L18 29Z"
+        fill=`${pipeolor}` />
+    <path d="M48 12C48 31.8823 31.8823 48 12 48" stroke="black" stroke-width="2" />
+    <path d="M30 12C30 21.9411 21.9411 30 12 30" stroke="black" stroke-width="2" />
+    <rect x="1" y="55" width="34" height="10" rx="3" transform="rotate(-90 1 55)" fill="white" stroke="black"
+        stroke-width="2" />
+    <rect x="21" y="11" width="10" height="34" rx="3" transform="rotate(-90 21 11)" fill="white" stroke="black"
+        stroke-width="2" />
+</svg>

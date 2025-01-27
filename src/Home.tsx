@@ -9,7 +9,7 @@ export const Home = ({}: HomeProps): React.ReactElement => {
   return (
     <Content>
       <HomeContainer>
-        <h1>Home</h1>
+        <span>Home</span>
       </HomeContainer>
     </Content>
   );
