@@ -27,15 +27,31 @@ export const LinkButton = styled.button<{ $isActive?: boolean }>`
 
 export const TextLogo = styled.div`
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   justify-content: center;
+  align-items: center;
 
   height: 100%;
 
-  h1 {
+  .icon-wrapper {
+    svg {
+      height: 60px;
+      margin-right: 0.5rem;
+    }
   }
 
-  h2 {
+  .headings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+    }
   }
 
   @media (max-width: ${breakpoints.MD}) {

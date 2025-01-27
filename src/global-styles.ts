@@ -71,10 +71,11 @@ table {
     --color-neutral: #FFFFFF;
     --color-text: #000000;
 
-
     --color-pipe-green: #23f354;
     --color-pipe-blue: #15cbf6;
     --color-pipe-orange: #ff8e47;
+
+    --debug: lightpink;
 
     // TYPOGRAPHY
     --typography-font-family: 'Inter', sans-serif;

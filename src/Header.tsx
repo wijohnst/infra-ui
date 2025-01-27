@@ -2,6 +2,7 @@ import * as React from "react";
 import { LinkButton, TextLogo } from "./GlobalComponent.styles";
 import { SemanticElement } from "./Header.styles";
 import { Section } from "./App";
+import PipeIcon from "./assets/logo_pipe.svg?react";
 
 type HeaderProps = {
   section: Section;
@@ -19,8 +20,13 @@ export const Header = ({
   return (
     <SemanticElement>
       <TextLogo>
-        <h1>Vote Yes Campaign</h1>
-        <h2>Vote Yes on Main Street Improvements</h2>
+        <div className="icon-wrapper">
+          <PipeIcon />
+        </div>
+        <div className="headings">
+          <h1>Pipe Up Lewiston</h1>
+          <h2>Speak Up for Main Street Improvements!</h2>
+        </div>
       </TextLogo>
       <nav>
         <LinkButton
