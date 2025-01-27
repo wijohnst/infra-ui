@@ -1,13 +1,16 @@
 import * as React from "react";
 
 import { Content } from "./Content";
+import { InfrastructureContainer } from "./Infrastructure.styles";
 
-export type HomeProps = {};
+export type InfrastructureProps = {};
 
-export const Infrastructure = ({}: HomeProps): React.ReactElement => {
+export const Infrastructure = ({}: InfrastructureProps): React.ReactElement => {
   return (
     <Content>
-      <h2>Why Infrastructure?</h2>
+      <InfrastructureContainer>
+        <h2>Why Infrastructure?</h2>
+      </InfrastructureContainer>
     </Content>
   );
 };

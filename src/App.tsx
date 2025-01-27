@@ -66,18 +66,10 @@ function App() {
     );
   };
 
-  React.useEffect(() => {
-    console.log(getContentHeight());
-  });
-
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Layout
-        setSection={setSection}
-        section={section || "home"}
-        getContentHeight={getContentHeight}
-      >
+      <Layout setSection={setSection} section={section || "home"}>
         <div ref={homeRef}>
           <Home />
         </div>

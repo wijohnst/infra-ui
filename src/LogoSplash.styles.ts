@@ -14,7 +14,7 @@ export const LogoSplashWrapper = styled.div<{}>`
     left: 0;
     right: 0;
     height: 10px; /* Adjust based on border width */
-    background: linear-gradient(90deg, #23f354 0%, #15cbf6 50%, #ff8e47 100%);
+    background: var(--pipe-gradient-y);
   }
 
   @media (max-width: ${breakpoints.SM}) {

@@ -1,65 +1,17 @@
 import styled from "styled-components";
 
 export const SemanticElement = styled.section`
-  background-color: var(--color-neutral);
-  width: 100%;
-  height: 100%;
+  margin-bottom: 1rem;
+  border-radius: var(--layout-size-md);
 
-  display: flex;
-  flex-direction: column;
-`;
+  padding: var(--layout-size-xxl);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  min-height: 400px;
 
-export const PipeFrameRow = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
 
-  .pipe-top {
-    border-top: solid 5px black;
-    width: 100%;
-    position: relative;
-    top: -20%;
-  }
-
-  .pipe-bottom {
-    width: 100%;
-    border-bottom: solid 5px black;
-    position: relative;
-    bottom: -20%;
-  }
-
-  .pipe-content {
-    width: 100%;
-    height: 100%;
-    border-left: solid 5px black;
-    border-right: solid 5px black;
-    margin-left: 10px;
-    margin-right: 10px;
-    min-height: 400px;
-  }
-`;
-
-export const PipeFrame = styled.div`
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 1;
-
-  .corner {
-    display: flex;
-    height: 60px;
-  }
-
-  .top-left > svg {
-    transform: rotate(180deg);
-  }
-
-  .top-right > svg {
-    transform: rotate(270deg);
-  }
-
-  .bottom-left > svg {
-    transform: rotate(90deg);
+  h2 {
+    font-size: 4rem;
+    font-weight: 900;
   }
 `;

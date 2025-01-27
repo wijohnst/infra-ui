@@ -16,6 +16,10 @@ export const SemanticElement = styled.header`
   top: 0;
   z-index: 100;
 
+  h2 {
+    font-size: 1rem;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -23,7 +27,7 @@ export const SemanticElement = styled.header`
     left: 0;
     right: 0;
     height: 10px; /* Adjust based on border width */
-    background: linear-gradient(90deg, #23f354 0%, #15cbf6 50%, #ff8e47 100%);
+    background: var(--pipe-gradient-y);
   }
 
   nav {

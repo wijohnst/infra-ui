@@ -1,6 +1,7 @@
-<svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M18 29L12 30V48H15L23 46L28 44L36 38L41 33L44 27L47 21V12H34H30V14L29 19L27 23L22 27L18 29Z"
-        fill=`${pipeolor}` />
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="56" height="56" transform="translate(0 56) rotate(-90)" fill="white" />
+    <path d="M30.5 12.5C30.1 26.5 18 30.3333 12 30.5V47.5C37.6 48.3 46.3333 23.8333 47.5 11H31.5L30.5 12.5Z"
+        fill="white" stroke="black" />
     <path d="M48 12C48 31.8823 31.8823 48 12 48" stroke="black" stroke-width="2" />
     <path d="M30 12C30 21.9411 21.9411 30 12 30" stroke="black" stroke-width="2" />
     <rect x="1" y="55" width="34" height="10" rx="3" transform="rotate(-90 1 55)" fill="white" stroke="black"
