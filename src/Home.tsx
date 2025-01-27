@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { Content } from "./Content";
 import { HomeContainer } from "./Home.styles";
-import Pipe from "./assets/pipe_frame_90.svg?react";
 
 export type HomeProps = {};
 
