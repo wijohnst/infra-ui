@@ -7,6 +7,11 @@ export const LogoSplashWrapper = styled.div<{}>`
 
   border-bottom: 10px solid transparent;
 
+  .reflect-bubble {
+    transform: scaleX(-1);
+    background-color: var(--debug);
+  }
+
   &::before {
     content: "";
     position: absolute;

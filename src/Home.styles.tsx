@@ -38,6 +38,10 @@ export const HomeContainer = styled.div`
       gap: 1rem;
     }
 
+    h1 {
+      font-size: 8rem;
+    }
+
     svg {
       height: 8rem;
     }
