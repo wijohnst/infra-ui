@@ -25,7 +25,7 @@ export const Header = ({
         </div>
         <div className="headings">
           <h1>Pipe Up Lewiston</h1>
-          <h2>Speak Up for Main Street Improvements!</h2>
+          <h2>Speak Up for Downtown!</h2>
         </div>
       </TextLogo>
       <nav>

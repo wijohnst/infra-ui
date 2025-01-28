@@ -12,6 +12,5 @@ export const SemanticElement = styled.section`
 
   h2 {
     font-size: 4rem;
-    font-weight: 900;
   }
 `;

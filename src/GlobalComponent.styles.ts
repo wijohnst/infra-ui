@@ -53,6 +53,20 @@ export const TextLogo = styled.div`
     h2 {
     }
   }
+  @media (max-width: ${breakpoints.MD}) {
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+    .headings {
+      h1 {
+        /* text-align: center; */
+      }
+    }
+  }
 
   @media (max-width: ${breakpoints.MD}) {
     flex: 1;

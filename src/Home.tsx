@@ -17,9 +17,9 @@ export const Home = ({}: HomeProps): React.ReactElement => {
             Our city’s future depends on strong, reliable infrastructure. With
             your support we can upgrade Lewiston’s aging water, sewer, and
             stormwater systems, install high-speed fiber optics, and create a
-            vibrant downtown—<strong>all without raising taxes</strong>. Let’s
-            invest in a safer, stronger community. Together, we can make it
-            happen!
+            vibrant downtown—<strong>all without raising taxes</strong>. All we
+            need is your voice! Keep reading to learn more and and how to get
+            involved!
           </p>
         </div>
         <div className="icons">
