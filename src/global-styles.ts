@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { breakpoints } from "./style-vars";
 
 const GlobalStyle = createGlobalStyle` 
 #root,html, body, div, span, applet, object, iframe,
@@ -94,7 +95,7 @@ table {
         word-spacing: 0.05em; /* Slightly increase word spacing */
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: ${breakpoints.SM}) {
         p {
             font-size: 14px; /* Adjust for smaller screens */
             margin-bottom: 1em; /* Reduce spacing */
@@ -104,22 +105,22 @@ table {
 
 h1 {
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 h2{
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 h3{
     font-size: 1.25rem;
-    font-weight: 500;
+    font-weight: 900;
 }
 
 h4{
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 900;
 }
 `;
 

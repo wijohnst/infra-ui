@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "./style-vars";
 
 export const HomeContainer = styled.div`
   display: flex;
@@ -45,25 +46,51 @@ export const HomeContainer = styled.div`
     svg {
       height: 8rem;
     }
+  }
 
-    .tax-icon {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+  @media (min-width: ${breakpoints.MD}) and (max-width: ${breakpoints.LG}) {
+    .icons {
+      width: 100%;
+    }
+  }
 
-      span {
+  @media (min-width: ${breakpoints.SM}) and (max-width: ${breakpoints.MD}) {
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+      h2 {
+        font-size: 2.5rem;
         text-align: center;
-        font-weight: 900;
-        position: absolute;
-        top: 40%;
-        left: 12.5%;
-        z-index: 1;
+        width: 100%;
+      }
+    }
+
+    .icons {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: ${breakpoints.SM}) {
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+      h2 {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
+
+    .icons {
+      width: 100%;
+
+      h1 {
+        font-size: 4rem;
       }
 
-      .icon {
-        z-index: 99;
+      svg {
+        height: 4rem;
       }
     }
   }
