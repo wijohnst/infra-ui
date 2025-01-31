@@ -1,16 +1,40 @@
 import styled from "styled-components";
+import { breakpoints } from "./style-vars";
 
 export const SemanticElement = styled.section`
   margin-bottom: 1rem;
   border-radius: var(--layout-size-md);
+  height: 100%;
 
-  padding: var(--layout-size-xxl);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  min-height: 400px;
+  padding: var(--layout-size-xxl);
 
   background-color: rgba(255, 255, 255, 0.5);
 
+  p {
+    font-size: 1.5rem;
+  }
+
   h2 {
     font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: ${breakpoints.SM}) {
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: ${breakpoints.SM}) and (max-width: ${breakpoints.MD}) {
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  }
+
+  strong {
+    font-weight: 900;
   }
 `;
