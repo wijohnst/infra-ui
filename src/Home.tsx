@@ -9,7 +9,7 @@ export const Home = ({}: HomeProps): React.ReactElement => {
   return (
     <Content>
       <HomeContainer>
-        <div className="copy">
+        <div>
           <div className="heading">
             <h2>PIPE UP LEWISTON!</h2>
           </div>

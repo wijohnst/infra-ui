@@ -49,23 +49,6 @@ function App() {
     }
   }, [section]);
 
-  //   const getContentHeight = (): number => {
-  //     const homeHeight = homeRef.current?.clientHeight || 0;
-  //     const infrastructureHeight = infrastructureRef.current?.clientHeight || 0;
-  //     const whyHeight = whyRef.current?.clientHeight || 0;
-  //     const bondHeight = bondRef.current?.clientHeight || 0;
-  //     const afterHeight = afterRef.current?.clientHeight || 0;
-  //     const involvedHeight = involvedRef.current?.clientHeight || 0;
-  //     return (
-  //       homeHeight +
-  //       infrastructureHeight +
-  //       whyHeight +
-  //       bondHeight +
-  //       afterHeight +
-  //       involvedHeight
-  //     );
-  //   };
-
   return (
     <React.Fragment>
       <GlobalStyle />

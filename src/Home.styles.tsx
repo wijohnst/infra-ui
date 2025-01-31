@@ -8,24 +8,6 @@ export const HomeContainer = styled.div`
   align-items: center;
   gap: var(--layout-size-xxl);
 
-  height: 100%;
-  width: 100%;
-
-  p {
-    font-size: 1.5rem;
-  }
-
-  strong {
-    font-weight: 900;
-  }
-
-  .heading {
-    display: flex;
-    width: 100%;
-    color: var(--color-neutral);
-    margin-bottom: 0.25rem;
-  }
-
   .icons {
     display: flex;
     flex-direction: column;
@@ -58,14 +40,6 @@ export const HomeContainer = styled.div`
     display: flex;
     flex-direction: column;
 
-    .heading {
-      h2 {
-        font-size: 2.5rem;
-        text-align: center;
-        width: 100%;
-      }
-    }
-
     .icons {
       width: 100%;
     }
@@ -74,13 +48,6 @@ export const HomeContainer = styled.div`
   @media (max-width: ${breakpoints.SM}) {
     display: flex;
     flex-direction: column;
-
-    .heading {
-      h2 {
-        font-size: 2rem;
-        text-align: center;
-      }
-    }
 
     .icons {
       width: 100%;

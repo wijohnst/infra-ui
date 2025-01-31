@@ -87,6 +87,9 @@ table {
 
     --pipe-gradient-x: linear-gradient(180deg, var(--color-pipe-green) 0%, var(--color-pipe-blue) 50%, var(--color-pipe-orange) 100%);
 
+    // MISC
+    --box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
     p {
         line-height: 1.6; /* Comfortable line spacing */
         color: #333; /* Dark gray for reduced eye strain compared to pure black */
