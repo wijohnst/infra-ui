@@ -75,3 +75,25 @@ export const TextLogo = styled.div`
     align-items: center;
   }
 `;
+
+export const GradDivider = styled.div`
+  hr {
+    display: none;
+  }
+
+  @media (max-width: ${breakpoints.SM}) {
+    hr {
+      display: block;
+      border: none;
+      margin-top: var(--layout-size-xxl);
+    }
+
+    hr::before {
+      content: "---";
+      display: block;
+      width: 100%;
+      height: 5px;
+      background: var(--pipe-gradient-y);
+    }
+  }
+`;

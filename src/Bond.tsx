@@ -4,6 +4,7 @@ import { Content } from "./Content";
 import { BondContainer } from "./Bond.styles";
 
 import NoTaxIcon from "./assets/no_tax_icon.svg?react";
+import { GradDivider } from "./GlobalComponent.styles";
 
 export type BondProps = {};
 
@@ -36,6 +37,9 @@ export const Bond = ({}: BondProps): React.ReactElement => {
           </div>
         </div>
       </BondContainer>
+      <GradDivider>
+        <hr />
+      </GradDivider>
     </Content>
   );
 };

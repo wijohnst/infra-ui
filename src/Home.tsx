@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { Content } from "./Content";
 import { HomeContainer } from "./Home.styles";
+import { GradDivider } from "./GlobalComponent.styles";
 
 export type HomeProps = {};
 
@@ -32,6 +33,9 @@ export const Home = ({}: HomeProps): React.ReactElement => {
           </div>
         </div>
       </HomeContainer>
+      <GradDivider>
+        <hr />
+      </GradDivider>
     </Content>
   );
 };

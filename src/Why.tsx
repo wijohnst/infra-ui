@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Content } from "./Content";
 import { WhyContainer } from "./Why.styles";
+import { GradDivider } from "./GlobalComponent.styles";
 
 export type WhyProps = {};
 
@@ -26,6 +27,9 @@ export const Why = ({}: WhyProps): React.ReactElement => {
           </div>
         </div>
       </WhyContainer>
+      <GradDivider>
+        <hr />
+      </GradDivider>
     </Content>
   );
 };

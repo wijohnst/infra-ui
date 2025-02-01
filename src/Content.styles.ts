@@ -11,8 +11,15 @@ export const SemanticElement = styled.section`
 
   background-color: rgba(255, 255, 255, 0.5);
 
-  p {
+  p,
+  li,
+  a {
     font-size: 1.5rem;
+  }
+
+  li {
+    line-height: 1.5rem;
+    font-weight: 300;
   }
 
   h2 {

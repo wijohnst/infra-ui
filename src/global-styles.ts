@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     font-family: var(--typography-font-family);
     font-size: 16px;  
+    font-weight: 300;
 	line-height: 1;
 }
 
@@ -99,7 +100,7 @@ table {
     }
 
     @media (max-width: ${breakpoints.SM}) {
-        p {
+        p, li, a {
             font-size: 14px; /* Adjust for smaller screens */
             margin-bottom: 1em; /* Reduce spacing */
         }
