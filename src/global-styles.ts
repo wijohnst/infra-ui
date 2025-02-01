@@ -100,7 +100,7 @@ table {
     }
 
     @media (max-width: ${breakpoints.SM}) {
-        p {
+        p, li, a {
             font-size: 14px; /* Adjust for smaller screens */
             margin-bottom: 1em; /* Reduce spacing */
         }

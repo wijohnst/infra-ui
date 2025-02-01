@@ -36,7 +36,7 @@ export const AfterContainer = styled.div`
     width: 100%;
 
     @media (max-width: ${breakpoints.MD}) {
-      flex-flow: column nowrap;
+      flex-direction: column-reverse;
     }
   }
 
@@ -47,6 +47,10 @@ export const AfterContainer = styled.div`
   .center-link {
     width: 100%;
     text-align: center;
+
+    @media (max-width: ${breakpoints.MD}) {
+      text-align: left;
+    }
   }
 
   .icon {
