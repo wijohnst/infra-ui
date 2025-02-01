@@ -21,6 +21,10 @@ export const SemanticElement = styled.section`
   }
 
   @media (max-width: ${breakpoints.SM}) {
+    background-color: unset;
+    box-shadow: unset;
+    padding: var(--layout-size-md);
+
     h2 {
       font-size: 2rem;
       text-align: center;

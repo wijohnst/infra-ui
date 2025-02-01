@@ -29,7 +29,7 @@ function App() {
   React.useEffect(() => {
     switch (section) {
       case "home":
-        homeRef.current?.scrollIntoView({ behavior: "smooth" });
+        window.scrollTo({ top: 0, behavior: "smooth" });
         break;
       case "infrastructure":
         infrastructureRef.current?.scrollIntoView({ behavior: "smooth" });

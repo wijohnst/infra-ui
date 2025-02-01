@@ -2,17 +2,35 @@ import styled from "styled-components";
 import { breakpoints } from "./style-vars";
 
 export const InfrastructureContainer = styled.div`
-  width: 100%;
   height: 100%;
+
   display: flex;
   flex-flow: column;
-  justify-content: flex-start;
+  justify-content: center;
 
-  animation: fade-in-bg-color 1s forwards ease-in-out;
+  padding: calc(var(--layout-size-xxl) + var(--layout-size-lg)); // 3.6rem
 
   .heading {
     display: flex;
     width: 100%;
+  }
+
+  .copy {
+    width: 100%;
+    margin: 0 0 var(--layout-size-xxl) 0;
+  }
+
+  .pipelines-container {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    border-radius: var(--layout-size-md);
+  }
+
+  @media (max-width: ${breakpoints.SM}) {
+    justify-content: center;
+    padding: 0;
   }
 `;
 
@@ -50,14 +68,9 @@ export const Pipelines = styled.div<{
 export const PipelineContent = styled.div<{
   $hasOpened: boolean;
 }>`
-  min-height: ${({ $hasOpened }) => ($hasOpened ? "100%" : "0%")};
-  position: relative;
-
-  top: -10px;
-
-  @media (max-width: ${breakpoints.SM}) {
-    top: -40px;
-  }
+  min-height: ${({ $hasOpened }) => ($hasOpened ? "400px" : "0%")};
+  display: flex;
+  flex-flow: row;
 `;
 
 export const PipelineExplainer = styled.div`
@@ -72,12 +85,20 @@ export const PipelineExplainer = styled.div`
 export const PipelineContentMember = styled.div<{ $backgroundColor: string }>`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  height: 100%;
+  width: 100%;
+
   opacity: 0;
 
   background-color: ${({ $backgroundColor }) => $backgroundColor};
   box-shadow: var(--box-shadow);
+
+  @media (max-width: ${breakpoints.SM}) {
+    background-color: unset;
+    box-shadow: unset;
+  }
 
   animation: reveal-copy 0.75s 0.75s forwards ease-in-out;
   padding: var(--layout-size-md);
@@ -139,14 +160,10 @@ export const PipelineContentMember = styled.div<{ $backgroundColor: string }>`
     justify-content: center;
     align-items: center;
 
-    width: 100%;
-
     .icon {
       height: 100%;
-      width: fit-content;
 
       display: flex;
-
       justify-content: center;
       align-items: center;
     }

@@ -1,7 +1,12 @@
 import styled from "styled-components";
+import { breakpoints } from "./style-vars";
 
 export const LayoutWrapper = styled.div`
   padding: var(--layout-size-md);
+
+  @media (max-width: ${breakpoints.SM}) {
+    padding: 0;
+  }
 `;
 
 export const ContentSection = styled.section`
@@ -13,4 +18,8 @@ export const ContentSection = styled.section`
 
   overflow-x: hidden;
   overflow-y: scroll;
+
+  @media (max-width: ${breakpoints.SM}) {
+    padding: var(--layout-size-sm);
+  }
 `;

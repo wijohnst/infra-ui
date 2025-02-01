@@ -36,43 +36,48 @@ export const Infrastructure = ({}: InfrastructureProps): React.ReactElement => {
   return (
     <Content>
       <InfrastructureContainer>
-        <div className="heading"></div>
-        <h2>PIPELINES TO PROSPERITY</h2>
-        <p>
-          A century of growth has left downtown's key services in need of some
-          serious TLC. Click each of the pipelines below to learn how it is
-          crucial for the next 100 years of vitality downtown.
-        </p>
-        <Pipelines $shouldPulse={activePipe === null}>
-          <div className="pulse">
+        <div className="heading">
+          <h2>PIPELINES TO PROSPERITY</h2>
+        </div>
+        <div className="copy">
+          <p>
+            A century of growth has left downtown's key services in need of some
+            serious TLC. Click each of the pipelines below to learn how it is
+            crucial for the next 100 years of vitality downtown.
+          </p>
+        </div>
+        <div className="pipelines-container">
+          <Pipelines $shouldPulse={activePipe === null}>
+            <div className="pulse">
+              <RevealPipe
+                pipeName="sewer"
+                pipeColor={colorCodesMap["sewer"]}
+                isActive={activePipe === "sewer"}
+                handleClick={setActivePipe}
+              />
+            </div>
             <RevealPipe
-              pipeName="sewer"
-              pipeColor={colorCodesMap["sewer"]}
-              isActive={activePipe === "sewer"}
+              pipeName="water"
+              pipeColor={colorCodesMap["water"]}
+              isActive={activePipe === "water"}
               handleClick={setActivePipe}
             />
-          </div>
-          <RevealPipe
-            pipeName="water"
-            pipeColor={colorCodesMap["water"]}
-            isActive={activePipe === "water"}
-            handleClick={setActivePipe}
-          />
-          <RevealPipe
-            pipeName="fiber"
-            pipeColor={colorCodesMap["fiber"]}
-            isActive={activePipe === "fiber"}
-            handleClick={setActivePipe}
-          />
-        </Pipelines>
-        <PipelineContent $hasOpened={hasOpened}>
-          {activePipe === "water" && <WaterContent />}
-          {activePipe === "sewer" && <SewerContent />}
-          {activePipe === "fiber" && <FiberContent />}
-        </PipelineContent>
-        <PipelineExplainer>
-          {activePipe === null && <span>Click a pipe to learn more.</span>}
-        </PipelineExplainer>
+            <RevealPipe
+              pipeName="fiber"
+              pipeColor={colorCodesMap["fiber"]}
+              isActive={activePipe === "fiber"}
+              handleClick={setActivePipe}
+            />
+          </Pipelines>
+          <PipelineContent $hasOpened={hasOpened}>
+            {activePipe === "water" && <WaterContent />}
+            {activePipe === "sewer" && <SewerContent />}
+            {activePipe === "fiber" && <FiberContent />}
+          </PipelineContent>
+          <PipelineExplainer>
+            {activePipe === null && <span>Click a pipe to learn more.</span>}
+          </PipelineExplainer>
+        </div>
       </InfrastructureContainer>
     </Content>
   );
