@@ -3,7 +3,13 @@ import { breakpoints } from "./style-vars";
 
 export const RevealPipeContainer = styled.div<{
   $isActive: boolean;
+  $isMobile: boolean;
 }>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   button {
     background-color: transparent;
     border: none;
@@ -28,7 +34,6 @@ export const RevealPipeContainer = styled.div<{
     transform: rotate(180deg) scaleX(-1);
     position: relative;
     top: -16px;
-    left: 6px;
 
     @media (max-width: ${breakpoints.SM}) {
       top: -45px;
