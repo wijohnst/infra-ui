@@ -11,30 +11,17 @@ export type RevealPipeProps = {
   handleClick: (pipe: PipeName) => void;
 };
 
-const isMobile = () => {
-  if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
 export const RevealPipe = ({
   pipeName,
   pipeColor,
   isActive,
   handleClick,
 }: RevealPipeProps): React.ReactElement => {
-  console.log("isMobile", isMobile());
+  console.log("isMobile");
   console.log("userAgent", navigator.userAgent);
   return (
     <RevealPipeContainer
       $isActive={isActive}
-      $isMobile={isMobile()}
       onClick={() => handleClick(pipeName)}
     >
       <button

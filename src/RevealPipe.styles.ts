@@ -3,7 +3,6 @@ import { breakpoints } from "./style-vars";
 
 export const RevealPipeContainer = styled.div<{
   $isActive: boolean;
-  $isMobile: boolean;
 }>`
   display: flex;
   flex-direction: column;
