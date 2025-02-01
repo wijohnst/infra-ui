@@ -17,8 +17,6 @@ export const RevealPipe = ({
   isActive,
   handleClick,
 }: RevealPipeProps): React.ReactElement => {
-  console.log("isMobile");
-  console.log("userAgent", navigator.userAgent);
   return (
     <RevealPipeContainer
       $isActive={isActive}
