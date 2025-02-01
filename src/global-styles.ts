@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     font-family: var(--typography-font-family);
     font-size: 16px;  
+    font-weight: 300;
 	line-height: 1;
 }
 

@@ -25,7 +25,6 @@ export const InfrastructureContainer = styled.div`
       rgba(255, 255, 255, 0.25) 0%,
       rgba(255, 255, 255, 0) 100%
     );
-    border-radius: var(--layout-size-md);
   }
 
   @media (max-width: ${breakpoints.SM}) {
@@ -102,8 +101,6 @@ export const PipelineContentMember = styled.div<{ $backgroundColor: string }>`
 
   animation: reveal-copy 0.75s 0.75s forwards ease-in-out;
   padding: var(--layout-size-md);
-
-  border-radius: var(--layout-size-md);
 
   h3 {
     font-size: 2rem;
