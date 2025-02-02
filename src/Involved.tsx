@@ -14,7 +14,7 @@ export const Involved = ({}: InvolvedProps): React.ReactElement => {
         </div>
         <InvolvedFormWrapper>
           <div className="form-heading">
-            <h3>Ready to change Lewiston's for the better?</h3>
+            <h3>Ready to change our community for the better?</h3>
             <span>Lend your support today!</span>
           </div>
           <form>
