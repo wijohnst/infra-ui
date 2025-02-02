@@ -126,6 +126,16 @@ h4{
     font-size: 1rem;
     font-weight: 900;
 }
+
+input {
+    border: none;
+    height: 2rem;
+    border-radius: var(--layout-size-sm);
+}
+
+label {
+    font-weight: 700;
+}
 `;
 
 export default GlobalStyle;
