@@ -18,14 +18,21 @@ export const Involved = ({}: InvolvedProps): React.ReactElement => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
+  const onSubmit = () => {
+    const form = document.querySelector<HTMLFormElement>("form");
+
+    if (!form) return;
+
+    const data = new FormData(form);
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(JSON.stringify(data)),
+      body: new URLSearchParams(data as any).toString(),
     })
       .then(() => alert("Thank You for your submission!"))
-      .catch((error) => alert(error));
+      .catch((error) => alert(error))
+      .finally(() => form.reset());
   };
 
   return (
