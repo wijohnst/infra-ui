@@ -18,21 +18,25 @@ export const Involved = ({}: InvolvedProps): React.ReactElement => {
     formState: { errors },
   } = useForm<FormData>();
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
     const form = document.querySelector<HTMLFormElement>("form");
 
     if (!form) return;
 
     const data = new FormData(form);
+    console.log(data.get("form-name"));
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(data as any).toString(),
-    })
-      .then(() => alert("Thank You for your submission!"))
-      .catch((error) => alert(error))
-      .finally(() => form.reset());
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data as any).toString(),
+      }).then(() => alert("Thank You for your submission!"));
+    } catch (error) {
+      alert(error);
+    }
+
+    form.reset();
   };
 
   return (
