@@ -19,12 +19,18 @@ export type Section =
 function App() {
   const [section, setSection] = React.useState<Section | null>(null);
 
-  const homeRef = React.useRef<HTMLDivElement>(null);
-  const infrastructureRef = React.useRef<HTMLDivElement>(null);
-  const whyRef = React.useRef<HTMLDivElement>(null);
-  const bondRef = React.useRef<HTMLDivElement>(null);
-  const afterRef = React.useRef<HTMLDivElement>(null);
-  const involvedRef = React.useRef<HTMLDivElement>(null);
+  const refMap = {
+    home: React.useRef<HTMLDivElement>(null),
+    infrastructure: React.useRef<HTMLDivElement>(null),
+    why: React.useRef<HTMLDivElement>(null),
+    bond: React.useRef<HTMLDivElement>(null),
+    after: React.useRef<HTMLDivElement>(null),
+    involved: React.useRef<HTMLDivElement>(null),
+  };
+
+  const scrollToRef = (ref: React.RefObject<HTMLDivElement>): void => {
+    ref.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
 
   React.useEffect(() => {
     switch (section) {
@@ -32,43 +38,63 @@ function App() {
         window.scrollTo({ top: 0, behavior: "smooth" });
         break;
       case "infrastructure":
-        infrastructureRef.current?.scrollIntoView({ behavior: "smooth" });
+        scrollToRef(refMap.infrastructure);
         break;
       case "why":
-        whyRef.current?.scrollIntoView({ behavior: "smooth" });
+        scrollToRef(refMap.why);
         break;
       case "bond":
-        bondRef.current?.scrollIntoView({ behavior: "smooth" });
+        scrollToRef(refMap.bond);
         break;
       case "after":
-        afterRef.current?.scrollIntoView({ behavior: "smooth" });
+        scrollToRef(refMap.after);
         break;
       case "involved":
-        involvedRef.current?.scrollIntoView({ behavior: "smooth" });
+        scrollToRef(refMap.involved);
+        break;
+      default:
         break;
     }
   }, [section]);
+
+  //   React.useEffect(() => {
+  //     const observer = new IntersectionObserver(
+  //       (entries) => {
+  //         const visibleSection = entries.find((entry) => entry.isIntersecting);
+  //         if (visibleSection?.target.id) {
+  //           setSection(visibleSection.target.id as Section);
+  //         }
+  //       },
+  //       { threshold: 0.9 } // Adjust visibility threshold
+  //     );
+
+  //     Object.values(refMap).forEach((ref) => {
+  //       if (ref.current) observer.observe(ref.current);
+  //     });
+
+  //     return () => observer.disconnect();
+  //   }, []);
 
   return (
     <React.Fragment>
       <GlobalStyle />
       <Layout setSection={setSection} section={section || "home"}>
-        <div ref={homeRef}>
+        <div ref={refMap.home} id="home">
           <Home />
         </div>
-        <div ref={infrastructureRef}>
+        <div ref={refMap.infrastructure} id="infrastructure">
           <Infrastructure />
         </div>
-        <div ref={whyRef}>
+        <div ref={refMap.why} id="why">
           <Why />
         </div>
-        <div ref={bondRef}>
+        <div ref={refMap.bond} id="bond">
           <Bond />
         </div>
-        <div ref={afterRef}>
+        <div ref={refMap.after} id="after">
           <After />
         </div>
-        <div ref={involvedRef}>
+        <div ref={refMap.involved} id="involved">
           <Involved />
         </div>
       </Layout>

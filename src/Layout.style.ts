@@ -14,6 +14,8 @@ export const ContentSection = styled.section`
   flex-direction: column;
   background: var(--pipe-gradient-x);
 
+  min-height: 400px;
+
   padding: 1rem;
 
   overflow-x: hidden;
