@@ -1,11 +1,33 @@
 import * as React from "react";
+import { useForm } from "react-hook-form";
 
 import { Content } from "./Content";
 import { InvolvedContainer, InvolvedFormWrapper } from "./Involved.styles";
 
+interface FormData {
+  name: string;
+  email: string;
+}
+
 export type InvolvedProps = {};
 
 export const Involved = ({}: InvolvedProps): React.ReactElement => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
+
+  const onSubmit = (data: FormData) => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(JSON.stringify(data)),
+    })
+      .then(() => alert("Thank You for your submission!"))
+      .catch((error) => alert(error));
+  };
+
   return (
     <Content>
       <InvolvedContainer>
@@ -17,27 +39,41 @@ export const Involved = ({}: InvolvedProps): React.ReactElement => {
             <h3>Ready to change our community for the better?</h3>
             <span>Lend your support today!</span>
           </div>
-          <form>
+          <form onSubmit={handleSubmit(onSubmit)} data-netlify="true">
             <div className="inputs">
               <div className="label-input-wrapper">
                 <label htmlFor="name" className="required">
                   Name
                 </label>
                 <input
+                  {...register("name", { required: "Name is required" })}
                   type="text"
                   id="name"
                   placeholder="Please enter your name"
                 />
+                {errors.name && (
+                  <span className="error-message">{errors.name.message}</span>
+                )}
               </div>
               <div className="label-input-wrapper">
                 <label htmlFor="email" className="required">
                   Email
                 </label>
                 <input
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Invalid email address",
+                    },
+                  })}
                   type="email"
                   id="email"
                   placeholder="Please enter your email"
                 />
+                {errors.email && (
+                  <span className="error-message">{errors.email.message}</span>
+                )}
               </div>
             </div>
             <button type="submit">Submit</button>
