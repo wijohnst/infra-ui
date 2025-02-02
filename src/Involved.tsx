@@ -47,6 +47,7 @@ export const Involved = ({}: InvolvedProps): React.ReactElement => {
             <span>Lend your support today!</span>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
             <div className="inputs">
               <div className="label-input-wrapper">
                 <label htmlFor="name" className="required">
