@@ -24,8 +24,8 @@ export const Header = ({
           <PipeIcon />
         </div>
         <div className="headings">
-          <h1>Pipe Up Lewiston</h1>
-          <h2>Pipes that Work!</h2>
+          <h1>Yes For Pipes</h1>
+          <h2>Pipes that Work. No new taxes.</h2>
         </div>
       </TextLogo>
       <nav>
