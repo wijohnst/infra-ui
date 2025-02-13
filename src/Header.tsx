@@ -25,7 +25,7 @@ export const Header = ({
         </div>
         <div className="headings">
           <h1>Yes For Pipes</h1>
-          <h2>Pipes that work. No new taxes.</h2>
+          <h2>Pipes that work. No tax increases.</h2>
         </div>
       </TextLogo>
       <nav>

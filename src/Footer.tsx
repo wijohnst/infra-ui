@@ -14,7 +14,7 @@ export const Footer = ({}: FooterProps): React.ReactElement => {
         <span>Join Us on Social Media!</span>
         <div className="icons">
           <a
-            href="https://www.facebook.com/YesForPipes"
+            href="https://www.facebook.com/share/g/1BRZn3LNKP/"
             target="_blank"
             rel="noreferrer"
           >

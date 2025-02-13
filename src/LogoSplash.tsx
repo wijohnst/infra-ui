@@ -9,7 +9,7 @@ export const LogoSplash = ({}: LogoSplashProps): React.ReactElement => {
     <LogoSplashWrapper>
       <img src={SplashImage} alt="Infrastructure improvements street scene" />
       <div>
-        <h1>Pipes that work! No new taxes!</h1>
+        <h1>Pipes that work! No tax increases!</h1>
       </div>
     </LogoSplashWrapper>
   );

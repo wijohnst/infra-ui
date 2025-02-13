@@ -32,7 +32,9 @@ export const After = ({}: HomeProps): React.ReactElement => {
             <div className="reimagine-link">
               <p>Learn more about these possibilities at:</p>
               <div className="center-link">
-                <a href="">www.reimaginelewiston.com</a>
+                <a href="https://reimaginedtlewiston.org/">
+                  www.reimaginelewiston.org
+                </a>
               </div>
             </div>
           </div>
