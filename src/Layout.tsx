@@ -20,8 +20,12 @@ export const Layout = ({
     <LayoutWrapper>
       <Header setSection={setSection} section={section} />
       <LogoSplash />
-      <ContentSection>{children}</ContentSection>
-      <Footer />
+      <ContentSection>
+        <>
+          {children}
+          <Footer />
+        </>
+      </ContentSection>
     </LayoutWrapper>
   );
 };

@@ -24,7 +24,6 @@ export const Involved = ({}: InvolvedProps): React.ReactElement => {
     if (!form) return;
 
     const data = new FormData(form);
-    console.log(data.get("form-name"));
 
     try {
       await fetch("/", {

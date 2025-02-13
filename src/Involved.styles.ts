@@ -87,5 +87,11 @@ export const InvolvedFormWrapper = styled.div`
         width: 100%;
       }
     }
+
+    .error-message {
+      margin: 0 0 var(--layout-size-lg) var(--layout-size-sm);
+      font-style: italic;
+      color: red;
+    }
   }
 `;
