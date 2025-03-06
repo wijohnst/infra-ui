@@ -47,7 +47,7 @@ export const Infrastructure = ({}: InfrastructureProps): React.ReactElement => {
           <p>
             A century of growth has left downtown's key services in need of some
             serious TLC. Click each of the pipelines below to learn how it is
-            crucial for the next 100 years of vitality downtown.
+            crucial for the next 100 years of vitality in our city.
           </p>
         </div>
         <div className="pipelines-container">
@@ -134,7 +134,7 @@ const SewerContent = (): React.ReactElement => {
             downtown? Built 90 years ago for a population half our size, the
             sewer system is at 70% capacity and increasingly prone to cracks and
             leaks. Failure of this system could result in sewage backups across
-            Lewiston, especially in The Orchards. Waiting for a catastrophic
+            Lewiston, especially in the Orchards. Waiting for a catastrophic
             failure would mean higher repair costs, legal issues, and
             disruption.
           </p>
@@ -175,22 +175,20 @@ const FiberContent = (): React.ReactElement => {
 const WasteContent = (): React.ReactElement => {
   return (
     <PipelineContentMember $backgroundColor={colorCodesMap["waste"]}>
-      <h3>WASTEWATER</h3>
+      <h3>STORMWATER</h3>
       <div className="copy-icon-wrapper">
         <div className="icon">
           <WastePipeIcon />
         </div>
         <div className="copy">
           <p>
-            Lewiston’s wastewater system, built nearly a century ago, is
-            operating at 70% capacity and was designed for a much smaller
-            population. As the city continues to grow, the risk of system
-            failures—leading to costly repairs and potential sewage backups—also
-            increases. By replacing the aging wastewater lines now, while
-            federal funding is already covering excavation costs, Lewiston can
-            avoid future disruptions, prevent emergency repairs, and ensure a
-            reliable wastewater system for residents and businesses, all without
-            raising taxes.
+            Just like the sewer line and water main, the stormwater drains are
+            also at the end of their life. The patchwork of pipes, including
+            drains that do not meet modern diameter requirements, cannot handle
+            the flow during heavy rains. When the runoff goes downhill to the
+            river, Main Street and the surrounding areas flood. Business owners
+            and other organizations need these improvements to keep functioning
+            while serving their customers, patients, and clients.
           </p>
         </div>
       </div>

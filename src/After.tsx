@@ -17,8 +17,8 @@ export const After = ({}: HomeProps): React.ReactElement => {
           <div className="copy">
             <p>
               After upgrading the infrastructure, the streets and sidewalks will
-              need repaving. This presents an opportunity to re-imagine
-              downtown.
+              need repaving. This presents an opportunity to put everything back
+              in a more efficient, cost effective way.
             </p>
             <p>Options include:</p>
             <ul>
