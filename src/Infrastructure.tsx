@@ -134,7 +134,7 @@ const SewerContent = (): React.ReactElement => {
             downtown? Built 90 years ago for a population half our size, the
             sewer system is at 70% capacity and increasingly prone to cracks and
             leaks. Failure of this system could result in sewage backups across
-            Lewiston, especially in the Orchards. Waiting for a catastrophic
+            Lewiston, including in the Orchards. Waiting for a catastrophic
             failure would mean higher repair costs, legal issues, and
             disruption.
           </p>
