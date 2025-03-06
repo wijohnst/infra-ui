@@ -16,11 +16,13 @@ import { RevealPipe, PipeName } from "./RevealPipe";
 import WaterPipeIcon from "./assets/water_pipe_icon.svg?react";
 import SewerPipeIcon from "./assets/sewer_pipe_icon.svg?react";
 import FiberPipeIcon from "./assets/fiber_pipe_icon.svg?react";
+import WastePipeIcon from "./assets/waste_pipe_icon.svg?react";
 
 const colorCodesMap = {
   water: "#15cbf6",
   sewer: "#23f354",
   fiber: "#ff8e47",
+  waste: "#F615C1",
 };
 
 export type InfrastructureProps = {};
@@ -45,7 +47,7 @@ export const Infrastructure = ({}: InfrastructureProps): React.ReactElement => {
           <p>
             A century of growth has left downtown's key services in need of some
             serious TLC. Click each of the pipelines below to learn how it is
-            crucial for the next 100 years of vitality downtown.
+            crucial for the next 100 years of vitality in our city.
           </p>
         </div>
         <div className="pipelines-container">
@@ -70,11 +72,18 @@ export const Infrastructure = ({}: InfrastructureProps): React.ReactElement => {
               isActive={activePipe === "fiber"}
               handleClick={setActivePipe}
             />
+            <RevealPipe
+              pipeName="waste"
+              pipeColor={colorCodesMap["waste"]}
+              isActive={activePipe === "waste"}
+              handleClick={setActivePipe}
+            />
           </Pipelines>
           <PipelineContent $hasOpened={hasOpened}>
             {activePipe === "water" && <WaterContent />}
             {activePipe === "sewer" && <SewerContent />}
             {activePipe === "fiber" && <FiberContent />}
+            {activePipe === "waste" && <WasteContent />}
           </PipelineContent>
           <PipelineExplainer>
             {activePipe === null && <span>Click a pipe to learn more.</span>}
@@ -125,7 +134,7 @@ const SewerContent = (): React.ReactElement => {
             downtown? Built 90 years ago for a population half our size, the
             sewer system is at 70% capacity and increasingly prone to cracks and
             leaks. Failure of this system could result in sewage backups across
-            Lewiston, especially in The Orchards. Waiting for a catastrophic
+            Lewiston, including in the Orchards. Waiting for a catastrophic
             failure would mean higher repair costs, legal issues, and
             disruption.
           </p>
@@ -156,6 +165,30 @@ const FiberContent = (): React.ReactElement => {
             improvements, it’s the perfect time to install fiber optic cables.
             This investment will deliver high-speed internet to residents and
             businesses while saving significant costs.
+          </p>
+        </div>
+      </div>
+    </PipelineContentMember>
+  );
+};
+
+const WasteContent = (): React.ReactElement => {
+  return (
+    <PipelineContentMember $backgroundColor={colorCodesMap["waste"]}>
+      <h3>STORMWATER</h3>
+      <div className="copy-icon-wrapper">
+        <div className="icon">
+          <WastePipeIcon />
+        </div>
+        <div className="copy">
+          <p>
+            Just like the sewer line and water main, the stormwater drains are
+            also at the end of their life. The patchwork of pipes, including
+            drains that do not meet modern diameter requirements, cannot handle
+            the flow during heavy rains. When the runoff goes downhill to the
+            river, Main Street and the surrounding areas flood. Business owners
+            and other organizations need these improvements to keep functioning
+            while serving their customers, patients, and clients.
           </p>
         </div>
       </div>

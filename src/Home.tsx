@@ -20,7 +20,7 @@ export const Home = ({}: HomeProps): React.ReactElement => {
             aging water, sewer, and stormwater systems, install high-speed fiber
             optics, and create a vibrant downtown—
             <strong>all without raising taxes</strong>. All we need is your
-            voice! Keep reading to learn more and and how to get involved!
+            vote!
           </p>
         </div>
         <div className="icons">

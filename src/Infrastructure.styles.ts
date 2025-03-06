@@ -46,6 +46,13 @@ export const Pipelines = styled.div<{
     margin: 0 1rem 0 1rem;
   }
 
+  @media (max-width: ${breakpoints.SM}) {
+    svg {
+      margin: 0 0.5rem 0 0.5rem;
+      filter: brightness(93%);
+    }
+  }
+
   .pulse {
     animation: ${({ $shouldPulse }) =>
       $shouldPulse ? "pulse 2s infinite" : "none"};
@@ -148,8 +155,11 @@ export const PipelineContentMember = styled.div<{ $backgroundColor: string }>`
 
     padding: 1rem;
 
-    @media (max-width: ${breakpoints.SM}) {
+    @media (max-width: ${breakpoints.MD}) {
       flex-flow: column nowrap;
+    }
+
+    @media (max-width: ${breakpoints.SM}) {
       padding: 0;
       gap: 0;
     }

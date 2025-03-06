@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { RevealPipeContainer } from "./RevealPipe.styles";
 
-export type PipeName = "water" | "sewer" | "fiber";
+export type PipeName = "water" | "sewer" | "fiber" | "waste";
 
 export type RevealPipeProps = {
   pipeName: PipeName;
