@@ -16,11 +16,13 @@ import { RevealPipe, PipeName } from "./RevealPipe";
 import WaterPipeIcon from "./assets/water_pipe_icon.svg?react";
 import SewerPipeIcon from "./assets/sewer_pipe_icon.svg?react";
 import FiberPipeIcon from "./assets/fiber_pipe_icon.svg?react";
+import WastePipeIcon from "./assets/waste_pipe_icon.svg?react";
 
 const colorCodesMap = {
   water: "#15cbf6",
   sewer: "#23f354",
   fiber: "#ff8e47",
+  waste: "#F615C1",
 };
 
 export type InfrastructureProps = {};
@@ -70,11 +72,18 @@ export const Infrastructure = ({}: InfrastructureProps): React.ReactElement => {
               isActive={activePipe === "fiber"}
               handleClick={setActivePipe}
             />
+            <RevealPipe
+              pipeName="waste"
+              pipeColor={colorCodesMap["waste"]}
+              isActive={activePipe === "waste"}
+              handleClick={setActivePipe}
+            />
           </Pipelines>
           <PipelineContent $hasOpened={hasOpened}>
             {activePipe === "water" && <WaterContent />}
             {activePipe === "sewer" && <SewerContent />}
             {activePipe === "fiber" && <FiberContent />}
+            {activePipe === "waste" && <WasteContent />}
           </PipelineContent>
           <PipelineExplainer>
             {activePipe === null && <span>Click a pipe to learn more.</span>}
@@ -156,6 +165,32 @@ const FiberContent = (): React.ReactElement => {
             improvements, it’s the perfect time to install fiber optic cables.
             This investment will deliver high-speed internet to residents and
             businesses while saving significant costs.
+          </p>
+        </div>
+      </div>
+    </PipelineContentMember>
+  );
+};
+
+const WasteContent = (): React.ReactElement => {
+  return (
+    <PipelineContentMember $backgroundColor={colorCodesMap["waste"]}>
+      <h3>WASTEWATER</h3>
+      <div className="copy-icon-wrapper">
+        <div className="icon">
+          <WastePipeIcon />
+        </div>
+        <div className="copy">
+          <p>
+            Lewiston’s wastewater system, built nearly a century ago, is
+            operating at 70% capacity and was designed for a much smaller
+            population. As the city continues to grow, the risk of system
+            failures—leading to costly repairs and potential sewage backups—also
+            increases. By replacing the aging wastewater lines now, while
+            federal funding is already covering excavation costs, Lewiston can
+            avoid future disruptions, prevent emergency repairs, and ensure a
+            reliable wastewater system for residents and businesses, all without
+            raising taxes.
           </p>
         </div>
       </div>
