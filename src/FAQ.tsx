@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Accordion } from "./accordion";
+import { Accordion } from "./Accordion";
 import { Content } from "./Content";
 
 import { FAQContainer } from "./FAQ.styles";
