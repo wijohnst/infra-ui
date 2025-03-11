@@ -7,6 +7,7 @@ import { Why } from "./Why";
 import { Bond } from "./Bond";
 import { After } from "./After";
 import { Involved } from "./Involved";
+import { FAQ } from "./FAQ";
 
 export type Section =
   | "home"
@@ -57,30 +58,13 @@ function App() {
     }
   }, [section]);
 
-  //   React.useEffect(() => {
-  //     const observer = new IntersectionObserver(
-  //       (entries) => {
-  //         const visibleSection = entries.find((entry) => entry.isIntersecting);
-  //         if (visibleSection?.target.id) {
-  //           setSection(visibleSection.target.id as Section);
-  //         }
-  //       },
-  //       { threshold: 0.9 } // Adjust visibility threshold
-  //     );
-
-  //     Object.values(refMap).forEach((ref) => {
-  //       if (ref.current) observer.observe(ref.current);
-  //     });
-
-  //     return () => observer.disconnect();
-  //   }, []);
-
   return (
     <React.Fragment>
       <GlobalStyle />
       <Layout setSection={setSection} section={section || "home"}>
         <div ref={refMap.home} id="home">
           <Home />
+          <FAQ />
         </div>
         <div ref={refMap.infrastructure} id="infrastructure">
           <Infrastructure />
