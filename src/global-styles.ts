@@ -101,8 +101,10 @@ table {
 
     @media (max-width: ${breakpoints.SM}) {
         p, li, a {
+            line-height: 1.25;
             font-size: 14px; /* Adjust for smaller screens */
             margin-bottom: 1em; /* Reduce spacing */
+            font-weight: 400; 
         }
     } 
 }
