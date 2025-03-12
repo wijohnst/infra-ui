@@ -24,6 +24,10 @@ export const AccordionWrapper = styled.div`
     flex-grow: 1;
   }
 
+  p {
+    margin: 0 auto;
+  }
+
   @media (max-width: ${breakpoints.SM}) {
     h2 {
       font-size: 1rem;
