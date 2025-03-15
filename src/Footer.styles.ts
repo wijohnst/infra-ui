@@ -10,6 +10,7 @@ export const SemanticElement = styled.footer`
   align-items: center;
 
   padding: var(--layout-size-md);
+  width: 100%;
 
   .social {
     display: flex;
@@ -28,10 +29,18 @@ export const SemanticElement = styled.footer`
     svg {
       height: 40px;
     }
+
+    hr {
+      width: 100%;
+      background-color: red;
+    }
   }
 
   .about {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     font-weight: 300;
+
+    text-align: center;
+    width: 75%;
   }
 `;
