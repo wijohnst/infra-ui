@@ -77,6 +77,7 @@ export const TextLogo = styled.div`
 `;
 
 export const GradDivider = styled.div`
+  width: 100%;
   hr {
     display: none;
   }

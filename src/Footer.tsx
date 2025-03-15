@@ -26,7 +26,7 @@ export const Footer = ({}: FooterProps): React.ReactElement => {
         </GradDivider>
       </div>
       <div className="about">
-        <span>{new Date().getFullYear()} Yes for Pipes!</span>
+        <span>Paid for by YES for Infrastructure Citizens Committee</span>
       </div>
     </SemanticElement>
   );
